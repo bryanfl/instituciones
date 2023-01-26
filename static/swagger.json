@@ -1,0 +1,264 @@
+{
+    "openapi": "3.0.0",
+    "info": {
+        "version": "1.0.0",
+        "title": "API Kuantaz"
+    },
+    "tags": [
+        {
+            "name": "Institución",
+            "description": "Solicitudes a la información de instituciones"
+        },
+        {
+            "name": "Usuario",
+            "description": "Solicitudes a la información de usuarios"
+        },
+        {
+            "name": "Proyecto",
+            "description": "Solicitudes a la información de proyectos"
+        }
+    ],
+    "paths": {
+        "/institucion": {
+            "get": {
+                "tags": [
+                    "Institución"
+                ],
+                "summary": "Retorna el listado de las instituciones",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    }
+                }
+            },
+            "post": {
+                "tags": [
+                    "Institución"
+                ],
+                "summary": "Crear una nueva institución",
+                "requestBody": {
+                    "description": "Datos requeridos",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/institucionPost"
+                        }
+                        }
+                    }
+                },
+                "produces": [
+                    "application/json"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    },
+                    "400": {
+                        "description": "Error al enviar los parametros requeridos"
+                    }
+                }
+            }
+        },
+        "/institucion/{id}": {
+            "get": {
+                "tags": [
+                    "Institución"
+                ],
+                "summary": "Institución (Filtró por id) con sus respectivos proyectos y responsable del proyecto",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "description": "Id Institución",
+                        "schema": {
+                            "$ref": "#/components/schemas/id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    }
+                }
+            },
+            "put": {
+                "tags": [
+                    "Institución"
+                ],
+                "summary": "Actualizar la informacion de una institución",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "description": "Id Institución",
+                        "schema": {
+                            "$ref": "#/components/schemas/id"
+                        }
+                    }
+                ],
+                "requestBody": {
+                    "description": "Datos requeridos",
+                    "required": true,
+                    "content": {
+                        "application/json": {
+                        "schema": {
+                            "$ref": "#/components/schemas/institucionPost"
+                        }
+                        }
+                    }
+                },
+                "responses": {
+                    "200": {
+                        "description": "Institución actualizada correctamente",
+                        "type": "object"
+                    }
+                }
+            },
+            "delete": {
+                "tags": [
+                    "Institución"
+                ],
+                "summary": "Eliminar una institución",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "id",
+                        "required": true,
+                        "description": "Id Institución",
+                        "schema": {
+                            "$ref": "#/components/schemas/id"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Institución eliminada correctamente",
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "/institucion/direcciones": {
+            "get": {
+                "tags": [
+                    "Institución"
+                ],
+                "summary": "Instituciones donde a cada institución se le agrega a la dirección la ubicación de google maps",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "/usuario": {
+            "get": {
+                "tags": [
+                    "Usuario"
+                ],
+                "summary": "Retorna el listado de los usuarios",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "/usuario/{rut}": {
+            "get": {
+                "tags": [
+                    "Usuario"
+                ],
+                "summary": "Usuario (filtro por Rut) con sus respectivos proyectos",
+                "parameters": [
+                    {
+                        "in": "path",
+                        "name": "rut",
+                        "required": true,
+                        "description": "Rut del Usuario",
+                        "schema": {
+                            "$ref": "#/components/schemas/rut"
+                        }
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "/proyecto": {
+            "get": {
+                "tags": [
+                    "Proyecto"
+                ],
+                "summary": "Retorna el listado de los proyectos",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    }
+                }
+            }
+        },
+        "/proyecto/tiempo": {
+            "get": {
+                "tags": [
+                    "Proyecto"
+                ],
+                "summary": "Nombre de los proyectos y los dias que faltan para que termine",
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "type": "object"
+                    }
+                }
+            }
+        }
+    },
+    "components": {
+        "schemas": {
+            "id": {
+                "properties": {
+                    "id": {
+                        "type": "string"
+                    }
+                }
+            },
+            "rut": {
+                "properties": {
+                    "rut": {
+                        "type": "string"
+                    }
+                }
+            },
+            "institucionPost": {
+                "type": "object",
+                "properties": {
+                    "nombre": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "descripcion": {
+                        "type": "string",
+                        "format": "string"
+                    },
+                    "fechaCreacion": {
+                        "type": "string",
+                        "format": "dd/mm/yyyy"
+                    }
+                }
+            }
+        }
+    }
+}
