@@ -78,3 +78,8 @@ Para ejecutar las pruebas unitarias solo basta con ejecutar el siguiente comando
 ```sh
   python -m pytest -v test\
 ```
+
+## Tambien esta presente entre los documentos un archivo JSON que sirve para poder importar los servicios en postman
+```sh
+  Kuantaz.postman_collection.json
+```
