@@ -1,4 +1,4 @@
-CREATE DATABASE prueba_kuantaz;
+CREATE DATABASE name_db;
 
 -- Table: public.institucion
 -- Insertar estos por el servicio web
