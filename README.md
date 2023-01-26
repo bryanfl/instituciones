@@ -72,3 +72,9 @@ En el archivo `inserted_rows_db.sql` esta presente los datos que se registraran 
 - Datos de los usuarios y proyectos seran registrados por la base de datos, ya que no cuentan con un servicio para el registro
 
 
+## Ejecutar las pruebas unitarias
+
+Para ejecutar las pruebas unitarias solo basta con ejecutar el siguiente comando
+```sh
+  python -m pytest -v test\
+```
