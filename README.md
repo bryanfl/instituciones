@@ -4,7 +4,7 @@ Esto es un ejemplo en un sistema operativo Windows
 ## Crear un entorno de desarrollo con Virtualenv
 - Instalamos virtualenv
 ```sh
-  pip3 install virtualenv
+  pip install virtualenv
 ```
 
 - Creamos nuestro entorno virtual
