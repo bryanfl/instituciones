@@ -3,27 +3,27 @@ CREATE DATABASE name_db;
 -- Table: public.institucion
 -- Insertar estos por el servicio web
 {
-    "nombre": 'Agencia de Calidad de la Educación',
-    "descripcion": 'Trabajamos con las comunidades educativas evaluando, orientando e informando para lograr una educación integral de calidad que permita que en Chile todas y todos puedan crecer y desarrollarse superando las brechas.', 
-    "fechaCreacion": '11/08/2011'
+    "nombre": "Agencia de Calidad de la Educación",
+    "descripcion": "Trabajamos con las comunidades educativas evaluando, orientando e informando para lograr una educación integral de calidad que permita que en Chile todas y todos puedan crecer y desarrollarse superando las brechas.", 
+    "fechaCreacion": "11/08/2011"
 }
 
 {
-    "nombre": 'Agencia e Sustentabilidad y Cambio Climático',
-    "descripcion": 'Somos un Comité de la Corporación de Fomento de la Producción (CORFO) y tenemos como misión fomentar la inclusión de la dimensión del cambio climático y el desarrollo sostenible en el sector privado y en los territorios.', 
-    "fechaCreacion": '01/01/1998'
+    "nombre": "Agencia e Sustentabilidad y Cambio Climático",
+    "descripcion": "Somos un Comité de la Corporación de Fomento de la Producción (CORFO) y tenemos como misión fomentar la inclusión de la dimensión del cambio climático y el desarrollo sostenible en el sector privado y en los territorios.", 
+    "fechaCreacion": "01/01/1998"
 }
 
 {
-    "nombre": 'Autoridad Sanitaria',
-    "descripcion": 'La autoridad regional debe fiscalizar y sancionar disposiciones del Código Sanitario y otras normativas. Asimismo, la Seremi de Salud fiscaliza materias como higiene y seguridad del ambiente y de los lugares de trabajo; alimentos; laboratorios; farmacias; inhumaciones; exhumaciones y traslado de cadáveres.', 
-    "fechaCreacion": '14/10/1924'
+    "nombre": "Autoridad Sanitaria",
+    "descripcion": "La autoridad regional debe fiscalizar y sancionar disposiciones del Código Sanitario y otras normativas. Asimismo, la Seremi de Salud fiscaliza materias como higiene y seguridad del ambiente y de los lugares de trabajo; alimentos; laboratorios; farmacias; inhumaciones; exhumaciones y traslado de cadáveres.", 
+    "fechaCreacion": "14/10/1924"
 }
 
 {
-    "nombre": 'Corporación de Asistencia Judicial Región Metropolitana',
-    "descripcion": 'Somos un Comité de la Corporación de Fomento de la Producción (CORFO) y tenemos como misión fomentar la inclusión de la dimensión del cambio climático y el desarrollo sostenible en el sector privado y en los territorios.', 
-    "fechaCreacion": '01/01/1998'
+    "nombre": "Corporación de Asistencia Judicial Región Metropolitana",
+    "descripcion": "Somos un Comité de la Corporación de Fomento de la Producción (CORFO) y tenemos como misión fomentar la inclusión de la dimensión del cambio climático y el desarrollo sostenible en el sector privado y en los territorios.", 
+    "fechaCreacion": "01/01/1998"
 }
 
 -- Estos datos si puede registrar en la base de datos defrente ya que no hay un servicio para crear registro en estas tablas
