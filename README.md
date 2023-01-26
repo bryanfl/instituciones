@@ -35,7 +35,10 @@ DATABASE=database
 ```
 
 ## Iniciamos la base de datos Postgresql - SQLAchemy
-
+- Primero crearemos la base de datos en Postgresql podemos hacerlo por comandos o con un gestor como lo seria `pgAdmin 4`
+```sh
+  CREATE DATABASE 'nombre_database'
+```
 - Definiremos el contexto de flask a nuestro archivo principal `main.py`
 ```sh
   set FLASK_APP=main.py
