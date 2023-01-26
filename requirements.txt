@@ -1,5 +1,5 @@
 # pip install -r requirements.txt
-flask=2.2.2
+flask==2.2.2
 flask_cors
 datetime
 PyJWT
